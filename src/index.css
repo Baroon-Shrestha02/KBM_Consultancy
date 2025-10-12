@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #e1562c;
+  --color-secondary: #16610f;
+}
+
+@font-face {
+  font-family: "gurota";
+  src: url("./Utils/Fonts/guorta-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "quick";
+  src: url("./Utils/Fonts/gc-quick-gaseous.ttf") format("truetype");
+}
+
+* {
+  font-family: "quick", "sans-serif";
+}
