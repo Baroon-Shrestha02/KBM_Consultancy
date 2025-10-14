@@ -100,45 +100,45 @@ export default function Footer() {
                 </h3>
                 <ul className="space-y-2">
                   <li>
-                    <a
+                    <Link
                       href="#"
                       className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
                     >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="#"
                       className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
                     >
                       About Us
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="#"
                       className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
                     >
                       Courses
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="#"
                       className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
                     >
                       Programs
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
+                    <Link
                       href="#"
                       className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
                     >
                       Gallery
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

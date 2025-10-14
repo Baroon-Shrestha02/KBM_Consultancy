@@ -97,10 +97,27 @@ export default function TeamMembers() {
             </p>
           </div>
 
+          <div className="flex items-center justify-between mb-8">
+            <button
+              onClick={handlePrev}
+              className="px-4 bg-white border-2 border-gray-300 hover:border-gray-400 text-gray-700 py-3 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2 font-medium shadow-sm"
+            >
+              <ChevronLeft size={20} />
+              Previous
+            </button>
+            <button
+              onClick={handleNext}
+              className=" px-4 bg-teal-500 hover:bg-teal-600 text-white py-3 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2 font-medium shadow-sm"
+            >
+              Next
+              <ChevronRight size={20} />
+            </button>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             {/* Left Side - Active Member Photo */}
             <div className="relative">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gray-200 shadow-lg">
+              <div className="aspect-[1/1] rounded-2xl overflow-hidden bg-gray-200 shadow-lg">
                 <img
                   key={activeMember.id}
                   src={activeMember.image}
@@ -167,22 +184,6 @@ export default function TeamMembers() {
                 </div>
 
                 {/* Navigation Buttons */}
-                <div className="flex gap-3">
-                  <button
-                    onClick={handlePrev}
-                    className="flex-1 bg-white border-2 border-gray-300 hover:border-gray-400 text-gray-700 py-3 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2 font-medium shadow-sm"
-                  >
-                    <ChevronLeft size={20} />
-                    Previous
-                  </button>
-                  <button
-                    onClick={handleNext}
-                    className="flex-1 bg-teal-500 hover:bg-teal-600 text-white py-3 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2 font-medium shadow-sm"
-                  >
-                    Next
-                    <ChevronRight size={20} />
-                  </button>
-                </div>
               </div>
             </div>
           </div>

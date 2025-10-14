@@ -5,7 +5,7 @@ export default function AboutTeam() {
   return (
     <section className="container mx-auto px-4 py-20">
       {/* Heading */}
-      <motion.div
+      {/* <motion.div
         className="text-3xl md:text-5xl font-extrabold text-center md:text-left mb-8"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -13,18 +13,22 @@ export default function AboutTeam() {
         transition={{ duration: 0.8 }}
       >
         Who are behind Your Success?
-      </motion.div>
+      </motion.div> */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Text Section */}
+
         <motion.div
-          className="space-y-6 text-gray-700 text-lg md:text-xl"
+          className="space-y-6 text-gray-700 "
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-justify">
+          <h1 className="text-3xl md:text-[42px] font-extrabold text-center md:text-left mb-8">
+            Who are behind your success?
+          </h1>
+          <p className="text-justify text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
             architecto distinctio omnis facere unde, voluptate dolores nihil
             officiis aperiam eveniet, ut autem pariatur consequuntur esse nulla
@@ -39,7 +43,7 @@ export default function AboutTeam() {
             rerum officia odio minima iusto nam corrupti necessitatibus odit
             ipsum enim quam quasi beatae recusandae fugiat facere dicta.
           </p>
-          <button className="text-lg underline text-blue-600 hover:text-blue-800 transition-colors">
+          <button className="text-lg px-4 py-1 rounded-xl bg-red-300 text-white transition-colors">
             See More about your instructors
           </button>
         </motion.div>

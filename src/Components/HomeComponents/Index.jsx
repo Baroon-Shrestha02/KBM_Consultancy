@@ -5,6 +5,8 @@ import HomeWhy from "./HomeWhy";
 import HomeContact from "./HomeContact";
 import HomeCta from "./HomeCta";
 import HomeServices from "./HomeServices";
+import HomeTestimonials from "./HomeTestimonials";
+import HomeSuccessStories from "./HomeSuccessStories";
 
 export default function Index() {
   return (
@@ -13,6 +15,8 @@ export default function Index() {
       <HomeIntro />
       <HomeServices />
       <HomeWhy />
+      <HomeSuccessStories />
+      <HomeTestimonials />
       <HomeContact />
       {/* <HomeCta /> */}
     </>

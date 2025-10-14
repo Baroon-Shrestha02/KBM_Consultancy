@@ -13,7 +13,8 @@ export default function HomeHero() {
       subtitle:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, hic!",
       image: "/Uploads/home/one.jpeg",
-      video: "https://example.com/video1.mp4",
+      video:
+        "https://res.cloudinary.com/dxo8kfpp0/video/upload/v1758869290/hero_yovnc6.mov",
     },
     {
       id: 2,
@@ -102,19 +103,20 @@ export default function HomeHero() {
         */}
 
         {/* Main Content Grid */}
-        <div className="relative z-10 h-full grid grid-cols-1 lg:grid-cols-2 gap-12 px-8 lg:px-20 max-w-[1600px] mx-auto">
-          {/* Left Side - Hero Content */}
+        {/* Main Content Grid */}
+        <div className="relative z-10 h-full flex flex-col px-8 lg:px-20 max-w-[1600px] mx-auto">
+          {/* Top Section - Hero Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col justify-center text-white"
+            className="flex flex-col justify-center text-white pt-12 lg:pt-20"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-6xl lg:text-7xl font-extrabold mb-8 tracking-wider leading-tight"
+              className="text-5xl lg:text-7xl font-extrabold mb-6 lg:mb-8 tracking-wider leading-tight"
               style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
             >
               Study Abroad
@@ -124,7 +126,7 @@ export default function HomeHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg lg:text-xl mb-12 text-white/90 font-light tracking-wide"
+              className="text-base lg:text-xl mb-8 lg:mb-12 text-white/90 font-light tracking-wide max-w-2xl"
             >
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
               eum nemo velit sint reiciendis illo, libero quam nesciunt
@@ -142,13 +144,13 @@ export default function HomeHero() {
             </motion.button>
           </motion.div>
 
-          {/* Right Side - Scrollable Container */}
-          <div className="flex items-center hidden md:block justify-end py-16 lg:py-0">
+          {/* Bottom Right - Horizontal Scrollable Container */}
+          <div className="flex items-end justify-end mt-auto pb-12">
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="w-full max-w-lg h-[600px] flex flex-col gap-6 overflow-y-auto pr-2"
+              className="w-full max-w-xl flex gap-6 overflow-x-auto pb-4"
               style={{
                 scrollbarWidth: "thin",
                 scrollbarColor: "rgba(255, 255, 255, 0.3) transparent",
@@ -158,15 +160,15 @@ export default function HomeHero() {
                 <motion.div
                   key={item.id}
                   variants={itemVariants}
-                  whileHover={{ scale: 1.02, x: -5 }}
+                  whileHover={{ scale: 1.02, y: -5 }}
                   transition={{ duration: 0.3 }}
                   onClick={() => handleMediaClick(item)}
-                  className="relative rounded-xl overflow-hidden shadow-2xl cursor-pointer group h-64 flex-shrink-0"
+                  className="relative rounded-xl overflow-hidden shadow-2xl cursor-pointer group flex-shrink-0 w-72 h-40"
                 >
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 "
+                    className="w-full h-full object-cover transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
 
@@ -223,11 +225,12 @@ export default function HomeHero() {
             className="relative max-w-5xl w-full bg-black rounded-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={selectedMedia.image}
-              alt={selectedMedia.title}
+            <video
+              src={selectedMedia.video}
+              autoPlay
+              loop
               className="w-full h-auto max-h-[80vh] object-contain"
-            />
+            ></video>
 
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-8 text-white">
               <h2 className="text-3xl font-bold mb-2">{selectedMedia.title}</h2>

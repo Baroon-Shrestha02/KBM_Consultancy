@@ -184,15 +184,6 @@ export default function Navbar() {
                             Mission & Vision
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to="/about/history"
-                            className="text-gray-700 hover:text-[#1a5f3f] transition block"
-                            onClick={closeDropdown}
-                          >
-                            Our History
-                          </Link>
-                        </li>
                       </ul>
                     </div>
 
@@ -415,7 +406,7 @@ export default function Navbar() {
                             className="text-gray-700 hover:text-[#1a5f3f] transition block"
                             onClick={closeDropdown}
                           >
-                            About Us
+                            Gallery
                           </Link>
                         </li>
                         <li>
@@ -429,20 +420,11 @@ export default function Navbar() {
                         </li>
                         <li>
                           <Link
-                            to="/blog"
+                            to="/faq"
                             className="text-gray-700 hover:text-[#1a5f3f] transition block"
                             onClick={closeDropdown}
                           >
-                            Blog
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to="/press"
-                            className="text-gray-700 hover:text-[#1a5f3f] transition block"
-                            onClick={closeDropdown}
-                          >
-                            Press Kit
+                            FAQ
                           </Link>
                         </li>
                       </ul>
@@ -451,24 +433,6 @@ export default function Navbar() {
                     <div>
                       <h4 className="font-bold text-[#1a5f3f] mb-4">Support</h4>
                       <ul className="space-y-2">
-                        <li>
-                          <Link
-                            to="/help"
-                            className="text-gray-700 hover:text-[#1a5f3f] transition block"
-                            onClick={closeDropdown}
-                          >
-                            Help Center
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to="/faq"
-                            className="text-gray-700 hover:text-[#1a5f3f] transition block"
-                            onClick={closeDropdown}
-                          >
-                            FAQ
-                          </Link>
-                        </li>
                         <li>
                           <Link
                             to="/contact"

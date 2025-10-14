@@ -6,74 +6,72 @@ export default function AboutIntro() {
     <section className="relative bg-white text-black overflow-hidden min-h-screen">
       {/* Angled Background Image */}
       <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center"
+        className="absolute inset-0 w-full h-[70vh] bg-cover bg-center"
         style={{
           clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 85%)",
           backgroundImage: "url('Uploads/home/one.jpeg')",
         }}
       ></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
+      <div className="relative z-10 container h-full mx-auto ">
         {/* White Content Box */}
-        <motion.div
-          className="bg-white backdrop-blur-2xl rounded-2xl shadow-2xl p-8 md:p-16 mt-40"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.h1
-            className="text-4xl md:text-6xl font-extrabold mb-12 text-center text-gray-900 leading-tight"
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            We're KBM Education Consultancy
-          </motion.h1>
-
-          <div className="space-y-8 text-gray-700 leading-relaxed text-lg md:text-xl">
-            <motion.p
-              className="text-justify"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-              voluptatibus, nam, vel odit repellat quidem est ipsa beatae nulla,
-              ab quisquam obcaecati asperiores neque. Sapiente voluptatem
-              deleniti culpa quas? Dolore tempora cum nesciunt accusamus quidem
-              dolorum sequi at qui harum nemo neque sit, reiciendis aperiam eum
-              eaque beatae quas deserunt distinctio optio. Inventore, facilis
-              quidem id fugit nulla saepe neque nostrum quibusdam quas,
-              laboriosam adipisci culpa optio minima doloribus odit praesentium
-              voluptatibus at veniam quisquam animi quod! Sit distinctio
-              perferendis, quidem, odio fuga quasi perspiciatis ducimus et
-              dolores neque dolore, doloribus culpa ex veniam? Porro molestias
-              reprehenderit explicabo officia voluptatem.
-            </motion.p>
-
-            <motion.p
-              className="text-justify"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum
-              quas repellendus architecto, ex nesciunt aspernatur nobis
-              consectetur alias magnam a. Distinctio, laboriosam culpa! Laborum,
-              quisquam consectetur, hic dolorum sit sequi, repellendus officiis
-              recusandae esse cumque porro illo quaerat suscipit dolores omnis
-              doloribus numquam neque at mollitia? Veniam id eum eius optio quae
-              quod provident incidunt culpa possimus ducimus sint, similique
-              illo architecto non, quisquam adipisci tenetur dignissimos
-              voluptate quam tempora saepe! Rem quasi totam tempore, aperiam
-              vitae voluptas doloremque! Distinctio.
-            </motion.p>
+        <div className="absolute inset-0 -z-10"></div>
+        <div className="grid grid-cols-2 m-12 gap-4">
+          <div className="grid grid-cols-2 gap-2 bg-white border-white border-6 rounded-3xl">
+            <div className="">
+              <img
+                src="Uploads/home/hero.avif"
+                alt=""
+                className="h-full w-full object-cover rounded-3xl"
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <div>
+                <img
+                  src="Uploads/home/hero.avif"
+                  alt=""
+                  className="h-full w-full object-cover rounded-3xl"
+                />
+              </div>
+              <div>
+                <img
+                  src="Uploads/home/hero.avif"
+                  alt=""
+                  className="h-full w-full object-cover rounded-3xl"
+                />
+              </div>
+            </div>
           </div>
-        </motion.div>
+          <div className="bg-gray-100 p-4">
+            <motion.h1
+              className="text-4xl font-extrabold mb-12 text-center text-black leading-tight"
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              We're KBM Education Consultancy
+            </motion.h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+              accusantium quo necessitatibus earum. Dolore pariatur repudiandae
+              rem similique perspiciatis voluptates ipsa, alias adipisci velit
+              repellat totam aut illo consectetur quasi qui unde. Est amet quam
+              omnis officiis ex. Veritatis quae maxime, nisi vitae ullam ducimus
+              nesciunt consequuntur vero sapiente eligendi tempore magnam
+              repellendus, cupiditate ea, eius numquam suscipit explicabo? Eaque
+              non omnis quaerat blanditiis eum provident perferendis, ab
+              possimus id libero soluta quis ratione quam esse rem mollitia iure
+              consequuntur ut officiis fuga aspernatur. Veritatis doloremque
+              aspernatur minus ut amet, voluptatem at magnam consectetur,
+              possimus qui ex, rerum odio! Doloribus?
+            </p>
+            <p className="italic text-base">
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur, culpa."
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
