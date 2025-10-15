@@ -147,7 +147,7 @@ export default function HomeContact() {
 
             <button
               onClick={handleSubmit}
-              className="w-full bg-primary text-white font-semibold py-3.5 rounded-lg transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl"
+              className="w-full bg-text text-white font-semibold py-3.5 rounded-lg transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl"
             >
               Send via WhatsApp
             </button>

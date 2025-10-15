@@ -48,7 +48,7 @@ const reasons = [
   },
 ];
 
-export default function HomeWhy() {
+export default function AboutSubWhy() {
   const [activeReason, setActiveReason] = useState(reasons[0]);
   const defaultImage =
     "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=600&h=400&fit=crop";
@@ -160,8 +160,29 @@ export default function HomeWhy() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white ">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative">
+      {/* Background Grid Pattern with vanishing gradients - moved to very back */}
+      <div
+        className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:50px_50px] z-0"
+        aria-hidden="true"
+      />
+
+      {/* Top vanishing gradient */}
+      <div
+        className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-gray-50 via-gray-50/80 to-transparent z-10"
+        aria-hidden="true"
+      />
+
+      {/* Bottom vanishing gradient */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white/80 to-transparent z-10"
+        aria-hidden="true"
+      />
+
+      {/* Blurred circles for depth - behind content */}
+      <div className="absolute -top-32 -left-32 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-40 z-10" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-100 rounded-full blur-3xl opacity-30 z-10" />
+      <div className="container mx-auto px-6 relative z-20">
         {/* Header Section - Always Visible */}
         <div className="flex items-center flex-col mb-6">
           <div className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
@@ -437,7 +458,7 @@ export default function HomeWhy() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </motion.div>
 
-              {/* Decorative Elements */}
+              {/* Decorative Elements - positioned behind the media */}
               <div className="absolute -z-10 top-4 left-4 w-full h-full bg-blue-100 rounded-3xl opacity-30" />
               <div className="absolute -z-20 top-8 left-8 w-full h-full bg-blue-200 rounded-3xl opacity-20" />
             </div>

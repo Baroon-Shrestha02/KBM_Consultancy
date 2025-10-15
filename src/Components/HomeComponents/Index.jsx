@@ -14,7 +14,7 @@ export default function Index() {
       <HomeHero />
       <HomeIntro />
       <HomeServices />
-      <HomeWhy />
+      {/* <HomeWhy /> */}
       <HomeSuccessStories />
       <HomeTestimonials />
       <HomeContact />

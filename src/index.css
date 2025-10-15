@@ -3,6 +3,8 @@
 @theme {
   --color-primary: #e1562c;
   --color-secondary: #16610f;
+  --color-background: #f4e9dc;
+  --color-text: #7a542f;
 }
 
 @font-face {

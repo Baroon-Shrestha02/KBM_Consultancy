@@ -98,7 +98,7 @@ export default function HomeIntro() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-text text-white px-8 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-shadow"
             >
               Learn More
             </motion.button>

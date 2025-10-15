@@ -12,6 +12,8 @@ import VisionIndex from "./Components/AboutComponents/SubPages/Vision/VisionInde
 import ScrollToTop from "./Components/HelperComponents/ScrollToTop";
 import TestimonialsMain from "./Components/AboutComponents/SubPages/Testimonials/TestimonialsMain";
 import SuccessStories from "./Components/AboutComponents/SubPages/SuccessStories/SuccessStories";
+import Footer2 from "./Components/Footer2";
+import AboutWhyMain from "./Components/AboutComponents/SubPages/Why/AboutWhyMain";
 
 function App() {
   return (
@@ -26,12 +28,14 @@ function App() {
         <Route element={<VisionIndex />} path="/about/vision" />
         <Route element={<TestimonialsMain />} path="/about/testimonials" />
         <Route element={<SuccessStories />} path="/about/success-stories" />
+        <Route element={<AboutWhyMain />} path="/about/why-choose-us" />
 
         <Route element={<ServicesPage />} path="/services" />
         <Route element={<ContactPage />} path="/contact" />
         <Route element={<StudyPage />} path="/study" />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
+      <Footer2 />
     </>
   );
 }

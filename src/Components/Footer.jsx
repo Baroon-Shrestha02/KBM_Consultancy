@@ -23,12 +23,12 @@ export default function Footer() {
             className="h-full w-full object-cover rounded-4xl shadow-xl"
           />
         </div>
-        <footer className="m-6 bg-gradient-to-br from-red-50 to-red-100 rounded-4xl shadow-xl overflow-hidden">
+        <footer className="m-6 bg-[#F3E9DC] bg-gadient-to-br from-red-50 to-red-100   rounded-4xl shadow-xl overflow-hidden">
           <div className="px-8 py-12 md:px-12 lg:px-16">
             {/* Top Section - Logo and Social Media */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
               <div className="mb-6 md:mb-0">
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h2 className="text-3xl font-bold text-[#7B542F]">
                   KMB Education
                 </h2>
               </div>
@@ -75,18 +75,18 @@ export default function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
               {/* Column 1 - Description */}
               <div>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-[#7B542F] text-base md:text-md  leading-relaxed">
                   KMB Education is dedicated to providing quality education and
                   training programs that prepare students for successful careers
                   in their chosen fields. We believe in nurturing talent and
                   fostering growth.
                 </p>
                 <div className="mt-4 space-y-2">
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <div className="flex items-center gap-2 text-md text-[#7B542F]">
                     <Mail size={16} className="text-red-500" />
                     <span>info@kmbeducation.com</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <div className="flex items-center gap-2 text-sm text-[#7B542F]">
                     <Phone size={16} className="text-red-500" />
                     <span>+977 1-XXXXXXX</span>
                   </div>
@@ -95,14 +95,14 @@ export default function Footer() {
 
               {/* Column 2 - Quick Links */}
               <div>
-                <h3 className="text-lg font-extrabold text-gray-800 mb-4">
+                <h3 className="text-lg font-extrabold text-[#7B542F] mb-4">
                   Quick Links
                 </h3>
                 <ul className="space-y-2">
                   <li>
                     <Link
                       href="#"
-                      className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
+                      className="text-[#7B542F] text-sm  transition-colors duration-200"
                     >
                       Home
                     </Link>
@@ -110,7 +110,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="#"
-                      className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
+                      className="text-[#7B542F] text-sm  transition-colors duration-200"
                     >
                       About Us
                     </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="#"
-                      className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
+                      className="text-[#7B542F] text-sm  transition-colors duration-200"
                     >
                       Courses
                     </Link>
@@ -126,7 +126,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="#"
-                      className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
+                      className="text-[#7B542F] text-sm  transition-colors duration-200"
                     >
                       Programs
                     </Link>
@@ -135,7 +135,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="#"
-                      className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
+                      className="text-[#7B542F] text-sm  transition-colors duration-200"
                     >
                       Gallery
                     </Link>
@@ -145,14 +145,14 @@ export default function Footer() {
 
               {/* Column 3 - Support */}
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                <h3 className="text-lg font-semibold text-[#7B542F] mb-4">
                   Support
                 </h3>
                 <ul className="space-y-2">
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
+                      className="text-[#7B542F] text-sm  transition-colors duration-200"
                     >
                       Contact Us
                     </a>
@@ -160,7 +160,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
+                      className="text-[#7B542F] text-sm  transition-colors duration-200"
                     >
                       FAQ
                     </a>
@@ -168,7 +168,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
+                      className="text-[#7B542F] text-sm  transition-colors duration-200"
                     >
                       Privacy Policy
                     </a>
@@ -176,7 +176,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 text-sm hover:text-red-500 transition-colors duration-200"
+                      className="text-[#7B542F] text-sm  transition-colors duration-200"
                     >
                       Terms & Conditions
                     </a>

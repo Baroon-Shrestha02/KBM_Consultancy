@@ -3,7 +3,7 @@ import { Home } from "lucide-react";
 
 export default function HeroSection2() {
   return (
-    <section className=" bg-gra00 p-8">
+    <section className=" bg-gra00 p-8 mt-[10vh]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Left side - Text content */}
         <div className="space-y-6 flex items-end flex-col">

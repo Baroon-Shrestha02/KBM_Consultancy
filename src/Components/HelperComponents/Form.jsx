@@ -29,24 +29,31 @@ export default function Form() {
   return (
     <>
       <section className="relative z-50">
+        {/* Desktop Button - Minimal */}
         <motion.button
           onClick={() => setIsModalOpen(true)}
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ x: 4 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-white fixed left-0 top-1/3 hidden md:block rounded-r-lg text-red-500 shadow-lg transition-colors cursor-pointer"
+          className="bg-text text-white font-extrabold fixed left-0 top-1/3 hidden md:flex items-center gap-1 rounded-r-full shadow-lg transition-all cursor-pointer group"
         >
-          <div className="px-3 py-1 text-xl font-extrabold">
-            Reach <br /> Us Out
+          <div className="px-4 py-3 text-sm font-medium tracking-wide">
+            Reach Us Out
           </div>
+          <ChevronRight
+            className="mr-2  group-hover:scale-105 transition-transform"
+            size={18}
+          />
         </motion.button>
+
+        {/* Mobile Button */}
         <motion.button
           onClick={() => setIsModalOpen(true)}
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.05, x: 5 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-white fixed left-0 top-1/3 block md:hidden rounded-r-lg text-red-500 shadow-lg transition-colors cursor-pointer"
+          className="bg-text fixed left-0 top-1/3 flex md:hidden items-center justify-center rounded-r-xl text-white shadow-2xl transition-all cursor-pointer border-r-4 border-red-700 hover:shadow-red-500/50"
         >
-          <div className="px-3 py-1 text-xl font-extrabold">
-            <ChevronRight />
+          <div className="px-3 py-4">
+            <ChevronRight size={24} />
           </div>
         </motion.button>
       </section>
@@ -75,29 +82,52 @@ export default function Form() {
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2, duration: 0.4 }}
-                  className="bg-gradient-to-br from-red-50 to-red-100 p-4 sm:p-6 md:p-8 md:w-2/5 flex flex-col items-center justify-center flex-shrink-0"
+                  className="relative md:w-2/5 flex flex-col items-center justify-center flex-shrink-0 overflow-hidden"
                 >
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-4 md:mb-6 text-center">
-                    Leave Us Your Details
-                  </h3>
-                  <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 0.3, duration: 0.4 }}
-                    className="bg-white p-3 sm:p-4 rounded-lg shadow-md mb-3 md:mb-4"
-                  >
-                    <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-gray-200 flex items-center justify-center">
-                      {/* QR Code Placeholder */}
-                      <img
-                        src="Uploads/home/one.jpeg"
-                        alt=""
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                  </motion.div>
-                  <p className="text-xs sm:text-sm text-gray-600 text-center">
-                    Scan to connect with us instantly
-                  </p>
+                  {/* Background Image with Dark Overlay */}
+                  <div className="absolute inset-0">
+                    <img
+                      src="Uploads/home/one.jpeg"
+                      alt="Background"
+                      className="h-full w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-red-900/50"></div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative z-10 p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center h-full">
+                    <motion.h3
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3, duration: 0.4 }}
+                      className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4 md:mb-6 text-center drop-shadow-lg"
+                    >
+                      Connect With Us
+                    </motion.h3>
+                    <motion.div
+                      initial={{ scale: 0.8, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ delay: 0.4, duration: 0.4 }}
+                      className="bg-white p-4 sm:p-5 rounded-xl shadow-2xl mb-4 md:mb-6 backdrop-blur-sm"
+                    >
+                      <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden">
+                        {/* QR Code Placeholder */}
+                        <img
+                          src="Uploads/home/qr.png"
+                          alt="QR Code"
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                    </motion.div>
+                    <motion.p
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.5, duration: 0.4 }}
+                      className="text-xs sm:text-sm text-white/90 text-center drop-shadow-md px-4"
+                    >
+                      Scan to connect with us instantly
+                    </motion.p>
+                  </div>
                 </motion.div>
 
                 {/* Right Side - Form Section */}
@@ -198,10 +228,13 @@ export default function Form() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.5, duration: 0.3 }}
-                      whileHover={{ scale: 1.02 }}
+                      whileHover={{
+                        scale: 1.02,
+                        boxShadow: "0 10px 40px rgba(239, 68, 68, 0.4)",
+                      }}
                       whileTap={{ scale: 0.98 }}
                       onClick={handleSubmit}
-                      className="w-full bg-red-500 text-white py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold hover:bg-red-600 transition-colors"
+                      className="w-full bg-text text-white py-3 sm:py-3.5 rounded-lg text-sm sm:text-base font-bold hover:from-red-700 hover:to-red-600 transition-all shadow-lg hover:shadow-red-500/50"
                     >
                       Send Message
                     </motion.button>

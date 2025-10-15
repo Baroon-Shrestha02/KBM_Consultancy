@@ -25,9 +25,9 @@ export default function AboutTeam() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-3xl md:text-[42px] font-extrabold text-center md:text-left mb-8">
-            Who are behind your success?
-          </h1>
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-gray-900">
+            Who are behind your Success?
+          </h2>
           <p className="text-justify text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
             architecto distinctio omnis facere unde, voluptate dolores nihil
@@ -43,7 +43,7 @@ export default function AboutTeam() {
             rerum officia odio minima iusto nam corrupti necessitatibus odit
             ipsum enim quam quasi beatae recusandae fugiat facere dicta.
           </p>
-          <button className="text-lg px-4 py-1 rounded-xl bg-red-300 text-white transition-colors">
+          <button className="text-lg px-4 py-1 rounded-xl bg-text text-white transition-colors">
             See More about your instructors
           </button>
         </motion.div>

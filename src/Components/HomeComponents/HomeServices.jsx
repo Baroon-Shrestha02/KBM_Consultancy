@@ -5,33 +5,33 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const content = [
   {
     id: 1,
-    name: "KWABS",
-    fullName: "Kwabena Sarkodee Adjepong",
-    tags: ["Soul", "R & B", "Electronica"],
+    name: "Counseling",
+    fullName: "Personalized Career & Study Counseling",
+    tags: ["Guidance", "Career Planning", "University Selection"],
     image:
-      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
     description:
-      "Born in London, Kwabena Adjepong was raised in Bermondsey, South London Borough of Southwark to Ghanaian parents. His school music teacher Xanthe Sarr, an ethnomusicologist and manager of the Southwark Youth Orchestra introduced him to the National Youth Jazz Orchestra. Accepted in the programme, Kwabs became the lead singer of the orchestra for three years. After his graduation, he studied jazz at the Royal Academy of Music.",
+      "We provide one-on-one counseling sessions to help students choose the right country, university, and course based on their academic background and career goals. Our experienced counselors ensure you make informed decisions for your future abroad.",
   },
   {
     id: 2,
-    name: "ARTIST TWO",
-    fullName: "Full Name Artist Two",
-    tags: ["Jazz", "Blues", "Classical"],
+    name: "Documentation",
+    fullName: "Document Preparation & Application Support",
+    tags: ["SOP", "Financial Documents", "Application Forms"],
     image:
-      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80",
+      "https://images.unsplash.com/photo-1581093588401-22c8d3a1f9c8?w=800&q=80",
     description:
-      "A talented musician who began their journey in the heart of New York City. Growing up surrounded by diverse musical influences, they developed a unique style that blends traditional jazz with contemporary elements. Their passion for music led them to study at Juilliard, where they honed their craft and emerged as a distinctive voice in modern jazz.",
+      "From preparing your Statement of Purpose to organizing financial and academic documents, our team ensures that every paper meets embassy and university standards. We guide you through every step of the application process with accuracy and care.",
   },
   {
     id: 3,
-    name: "ARTIST THREE",
-    fullName: "Full Name Artist Three",
-    tags: ["Pop", "Rock", "Indie"],
+    name: "Visa Processing",
+    fullName: "Visa Application & Interview Preparation",
+    tags: ["Visa Filing", "Interview Guidance", "Embassy Support"],
     image:
-      "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&q=80",
+      "https://images.unsplash.com/photo-1600267165946-b441c9c1bb7b?w=800&q=80",
     description:
-      "An innovative artist from Los Angeles who has been making waves in the indie music scene. Their eclectic approach to songwriting combines introspective lyrics with experimental soundscapes. After years of performing in local venues, they gained recognition for their unique ability to merge pop sensibilities with rock energy, creating a sound that resonates with audiences worldwide.",
+      "Our experts assist in preparing all necessary visa documents and offer mock interview sessions to build your confidence. We stay updated with the latest immigration rules to ensure a smooth visa approval process.",
   },
 ];
 
@@ -143,7 +143,7 @@ export default function HomeServices() {
             >
               <div className="space-y-6">
                 <div>
-                  <h2 className="text-5xl lg:text-6xl font-bold text-amber-500 mb-2">
+                  <h2 className="text-5xl lg:text-6xl font-bold text-text mb-2">
                     {currentContent.name}
                   </h2>
                   <p className="text-xl text-gray-700 font-medium">
@@ -155,7 +155,7 @@ export default function HomeServices() {
                   {currentContent.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="px-6 py-2 bg-amber-400 text-white rounded-full font-medium text-sm"
+                      className="px-6 py-2 bg-background text-text rounded-full font-medium text-sm"
                     >
                       {tag}
                     </span>
@@ -170,7 +170,7 @@ export default function HomeServices() {
           </AnimatePresence>
 
           {/* Large Background Number */}
-          <div className="absolute bottom-0 right-6 text-[250px] font-bold text-amber-500/20 leading-none pointer-events-none">
+          <div className="absolute bottom-0 right-6 text-[250px] font-bold text-background leading-none pointer-events-none">
             0{currentContent.id}
           </div>
 
@@ -256,7 +256,7 @@ export default function HomeServices() {
               <div className="p-6 relative">
                 <div className="space-y-4">
                   <div>
-                    <h2 className="text-4xl font-bold text-amber-500 mb-1">
+                    <h2 className="text-4xl font-bold text-background mb-1">
                       {currentContent.name}
                     </h2>
                     <p className="text-lg text-gray-700 font-medium">
@@ -268,7 +268,7 @@ export default function HomeServices() {
                     {currentContent.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-4 py-1.5 bg-amber-400 text-white rounded-full font-medium text-xs"
+                        className="px-4 py-1.5 bg-background text-text rounded-full font-medium text-xs"
                       >
                         {tag}
                       </span>
@@ -281,7 +281,7 @@ export default function HomeServices() {
                 </div>
 
                 {/* Large Background Number */}
-                <div className="absolute bottom-0 right-0 text-[120px] font-bold text-amber-500/10 leading-none pointer-events-none">
+                <div className="absolute bottom-0 right-0 text-[120px] font-bold text-background leading-none pointer-events-none">
                   0{currentContent.id}
                 </div>
               </div>

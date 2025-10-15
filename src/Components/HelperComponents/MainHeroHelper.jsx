@@ -3,7 +3,7 @@ import React from "react";
 export default function MainHeroHelper() {
   return (
     <>
-      <section className="relative h-[70vh] overflow-hidden mx-6 my-6 rounded-4xl">
+      <section className="relative h-[70vh] overflow-hidden mx-6 my-6 rounded-4xl mt-[12vh]">
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center "
           style={{

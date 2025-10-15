@@ -77,7 +77,7 @@ export default function HomeHero() {
 
   return (
     <>
-      <section className="relative h-[85vh] overflow-hidden mx-6 my-6 rounded-4xl">
+      <section className="relative h-[85vh] overflow-hidden mx-6 my-6 rounded-4xl mt-[12vh]">
         {/* Background Image */}
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-left "

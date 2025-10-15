@@ -3,7 +3,7 @@ import React from "react";
 export default function HeroSection() {
   return (
     <>
-      <section className="relative h-[70vh] m-6">
+      <section className="relative h-[70vh]  mt-[10vh]">
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center rounded-4xl"
           style={{
