@@ -14,6 +14,12 @@ import TestimonialsMain from "./Components/AboutComponents/SubPages/Testimonials
 import SuccessStories from "./Components/AboutComponents/SubPages/SuccessStories/SuccessStories";
 import Footer2 from "./Components/Footer2";
 import AboutWhyMain from "./Components/AboutComponents/SubPages/Why/AboutWhyMain";
+import FaqMain from "./Components/FAQComponents/FaqMain";
+import JapanMain from "./Components/StudyComponents/Japan/JapanMain";
+import AusMain from "./Components/StudyComponents/Australia/AusMain";
+import UkMain from "./Components/StudyComponents/UK/UkMain";
+import CadMain from "./Components/StudyComponents/Canada/CadMain";
+import UsMain from "./Components/StudyComponents/USA/UsMain";
 
 function App() {
   return (
@@ -32,7 +38,15 @@ function App() {
 
         <Route element={<ServicesPage />} path="/services" />
         <Route element={<ContactPage />} path="/contact" />
+
         <Route element={<StudyPage />} path="/study" />
+        <Route element={<JapanMain />} path="/study/japan" />
+        <Route element={<AusMain />} path="/study/australia" />
+        <Route element={<UkMain />} path="/study/uk" />
+        <Route element={<CadMain />} path="/study/canada" />
+        <Route element={<UsMain />} path="/study/usa" />
+
+        <Route element={<FaqMain />} path="/faq" />
       </Routes>
       {/* <Footer /> */}
       <Footer2 />

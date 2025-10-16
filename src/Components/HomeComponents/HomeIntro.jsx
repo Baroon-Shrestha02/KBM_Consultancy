@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 export default function HomeIntro() {
   const stats = [
-    { value: "7+", label: "Years Experience" },
-    { value: "1000+", label: "Happy Students" },
-    { value: "99%", label: "Success Rate" },
+    { value: "5+", label: "Years Experience" },
+    { value: "500+", label: "Happy Students" },
+    { value: "90%", label: "Success Rate" },
   ];
 
   return (
@@ -75,22 +75,22 @@ export default function HomeIntro() {
             We're KBM Education Consultancy Pvt. Ltd.
           </h1>
 
-          <div className="space-y-4 text-gray-600 leading-relaxed ">
-            <p className="text-lg">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-              quidem tempore ullam amet odio nemo obcaecati necessitatibus
-              dolor, voluptatem, maxime a excepturi optio dicta? Nesciunt fuga
-              iusto consectetur harum atque illum culpa porro facere aut ratione
-              sequi, voluptatum officia quasi a! Aliquid soluta, modi
-              voluptatibus distinctio ipsa porro vitae, quo, optio fugit cumque
-              odit possimus quas recusandae perferendis voluptate obcaecati.
+          <div className="space-y-4 text-gray-600 leading-relaxed">
+            <p className="text-lg ">
+              At KBM Education Consultancy, we guide students toward achieving
+              their academic and career aspirations in Japan, USA, Australia,
+              UK, Canada, and other countries. With a focus on personalized
+              mentorship, practical guidance, and up-to-date industry insights,
+              we ensure every student is fully prepared for their international
+              journey.
             </p>
 
-            <p className="text-lg">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam
-              distinctio nam voluptas eligendi perferendis magni incidunt
-              laboriosam ut ea. Delectus, harum minima. Voluptatum perspiciatis
-              repudiandae est quas. Expedita veniam alias voluptatem quas, sed
+            <p className="text-lg ">
+              Our dedicated team works closely with each student, providing
+              end-to-end support — from understanding visa requirements to
+              navigating educational pathways and career opportunities. At KBM,
+              your success is our priority, and we empower you to make informed
+              decisions for a brighter future.
             </p>
           </div>
 

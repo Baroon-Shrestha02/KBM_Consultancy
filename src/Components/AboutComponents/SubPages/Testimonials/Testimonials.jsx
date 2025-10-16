@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Testimonials() {
@@ -6,88 +6,103 @@ export default function Testimonials() {
     {
       id: 1,
       name: "Aarav Sharma",
-      image: "Main/student1.jpg",
+      image: "/Uploads/home/prof.jpg",
       quote:
         "The instructors were incredibly supportive and made complex topics easy to understand. My experience here truly transformed my career path. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, molestias possimus. Corporis omnis aut commodi tenetur ea? Ducimus, laboriosam obcaecati necessitatibus eaque, harum, voluptatibus corrupti tempore numquam accusamus laborum doloremque itaque! Quo tenetur quia at, reprehenderit nemo sit repellendus enim sequi unde totam libero minus optio, vel et fuga numquam voluptatem sint, officiis doloremque quam voluptates a! Deleniti eaque atque commodi animi explicabo modi consequuntur, ad alias dolorem recusandae placeat.",
     },
     {
       id: 2,
       name: "Priya Karki",
-      image: "Main/student2.jpg",
+      image: "/Uploads/home/prof.jpg",
       quote:
         "I loved how interactive and practical the sessions were. It wasn’t just theory – we actually got hands-on experience on real-world projects.",
     },
     {
       id: 3,
       name: "Rohit Thapa",
-      image: "Main/student3.jpg",
+      image: "/Uploads/home/prof.jpg",
       quote:
         "The learning environment and mentorship exceeded my expectations. I feel more confident in my skills and career direction.",
     },
     {
       id: 4,
       name: "Aarav Sharma",
-      image: "Main/student1.jpg",
+      image: "/Uploads/home/prof.jpg",
       quote:
         "The instructors were incredibly supportive and made complex topics easy to understand. My experience here truly transformed my career path.",
     },
     {
       id: 5,
       name: "Priya Karki",
-      image: "Main/student2.jpg",
+      image: "/Uploads/home/prof.jpg",
       quote:
         "I loved how interactive and practical the sessions were. It wasn’t just theory – we actually got hands-on experience on real-world projects.",
     },
     {
       id: 6,
       name: "Rohit Thapa",
-      image: "Main/student3.jpg",
+      image: "/Uploads/home/prof.jpg",
       quote:
         "The learning environment and mentorship exceeded my expectations. I feel more confident in my skills and career direction.",
     },
     {
       id: 7,
       name: "Aarav Sharma",
-      image: "Main/student1.jpg",
+      image: "/Uploads/home/prof.jpg",
       quote:
         "The instructors were incredibly supportive and made complex topics easy to understand. My experience here truly transformed my career path.",
     },
     {
       id: 8,
       name: "Priya Karki",
-      image: "Main/student2.jpg",
+      image: "/Uploads/home/prof.jpg",
       quote:
         "I loved how interactive and practical the sessions were. It wasn’t just theory – we actually got hands-on experience on real-world projects.",
     },
     {
       id: 9,
       name: "Rohit Thapa",
-      image: "Main/student3.jpg",
+      image: "/Uploads/home/prof.jpg",
       quote:
         "The learning environment and mentorship exceeded my expectations. I feel more confident in my skills and career direction.",
     },
     {
       id: 10,
       name: "Aarav Sharma",
-      image: "Main/student1.jpg",
+      image: "/Uploads/home/prof.jpg",
       quote:
         "The instructors were incredibly supportive and made complex topics easy to understand. My experience here truly transformed my career path.",
     },
     {
       id: 11,
       name: "Priya Karki",
-      image: "Main/student2.jpg",
+      image: "/Uploads/home/prof.jpg",
       quote:
         "I loved how interactive and practical the sessions were. It wasn’t just theory – we actually got hands-on experience on real-world projects.",
     },
     {
       id: 12,
       name: "Rohit Thapa",
-      image: "Main/student3.jpg",
+      image: "/Uploads/home/prof.jpg",
+      quote:
+        "The learning environment and mentorship exceeded my expectations. I feel more confident in my skills and career direction.",
+    },
+    {
+      id: 12,
+      name: "Rohit Thapa",
+      image: "/Uploads/home/prof.jpg",
       quote:
         "The learning environment and mentorship exceeded my expectations. I feel more confident in my skills and career direction.",
     },
   ];
+
+  const [visibleCount, setVisibleCount] = useState(8);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 6);
+  };
+
+  const visibleTestimonials = testimonials.slice(0, visibleCount);
 
   return (
     <div className="min-h-screen my-12 px-4 md:px-8">
@@ -119,37 +134,47 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials Section */}
-        <div className="w-full lg:w-1/2">
-          <div className="space-y-6">
-            {testimonials.map((item, index) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.2 }}
-                className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
-              >
-                <div className="flex items-start gap-4">
-                  {/* Image */}
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-secondary"
-                  />
+        <div className="w-full lg:w-1/2 space-y-6">
+          {visibleTestimonials.map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.2 }}
+              className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="flex items-start gap-4">
+                {/* Image */}
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-16 h-16 rounded-full object-cover border-2 border-secondary"
+                />
 
-                  {/* Quote and Name */}
-                  <div className="flex-1">
-                    <p className="text-gray-700 leading-relaxed italic mb-3 text-justify">
-                      “{item.quote}”
-                    </p>
-                    <h3 className="font-semibold text-gray-900 text-lg">
-                      — {item.name}
-                    </h3>
-                  </div>
+                {/* Quote and Name */}
+                <div className="flex-1">
+                  <p className="text-gray-700 leading-relaxed italic mb-3 text-justify">
+                    “{item.quote}”
+                  </p>
+                  <h3 className="font-semibold text-gray-900 text-lg">
+                    — {item.name}
+                  </h3>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+            </motion.div>
+          ))}
+
+          {/* Load More Button */}
+          {visibleCount < testimonials.length && (
+            <div className="flex justify-center mt-4">
+              <button
+                onClick={handleLoadMore}
+                className="px-6 py-2 bg-text text-white rounded-full  transition-colors duration-300"
+              >
+                View More
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

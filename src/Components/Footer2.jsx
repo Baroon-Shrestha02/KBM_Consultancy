@@ -1,4 +1,9 @@
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import React from "react";
+import { BsTiktok, BsWhatsapp } from "react-icons/bs";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa6";
+import { ImWhatsapp } from "react-icons/im";
 import { Link } from "react-router-dom";
 
 export default function Footer2() {
@@ -82,9 +87,28 @@ export default function Footer2() {
               <li>
                 <Link to="#">JOIN US</Link>
               </li>
-              <li>
-                <Link to="#">LINKEDIN</Link>
-              </li>
+              <div className="flex items-center gap-4">
+                <li>
+                  <Link to="#">
+                    <Facebook />
+                  </Link>
+                </li>
+                <li>
+                  <Link to="#">
+                    <Instagram />
+                  </Link>
+                </li>
+                <li>
+                  <Link to="#">
+                    <Linkedin />
+                  </Link>
+                </li>
+                <li>
+                  <Link to="#">
+                    <FaTiktok />
+                  </Link>
+                </li>
+              </div>
             </ul>
           </div>
 

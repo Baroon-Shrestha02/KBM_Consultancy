@@ -84,13 +84,13 @@ export default function HomeServices() {
   return (
     <section className="container mx-auto px-4 py-12">
       <div className="mb-12 flex items-center flex-col gap-4">
-        <h1 className="text-4xl lg:text-5xl text-center font-bold text-gray-900 leading-tight ">
-          Explore Your Needs.
+        <h1 className="text-4xl lg:text-5xl text-center font-extrabold text-text leading-tight ">
+          Explore Our Services
         </h1>
-        <p className="max-w-3xl text-center text-base md:text-lg">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum sed
-          repellendus velit quia ipsam in blanditiis pariatur voluptas obcaecati
-          commodi.
+        <p className="max-w-3xl text-center text-base md:text-lg mx-auto">
+          KBM Education Consultancy helps students and professionals achieve
+          their dreams abroad. We provide visa assistance, mentorship, and
+          career guidance for Japan, USA, Australia, UK, Canada, and more.
         </p>
       </div>
 

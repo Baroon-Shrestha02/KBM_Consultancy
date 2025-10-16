@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function AboutWhy() {
   return (
@@ -137,6 +138,14 @@ export default function AboutWhy() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex items-center justify-center mt-8 flex-col text-base md:text-xl gap-3">
+        <p>Learn more about the services of KBM</p>
+        <Link to="/about/why-choose-us">
+          <button className="px-4 py-1 text-lg md:text-2xl  bg-text text-white rounded-xl hover:scale-105 duration-500 ease-in-out">
+            Learn More
+          </button>
+        </Link>
       </div>
     </section>
   );

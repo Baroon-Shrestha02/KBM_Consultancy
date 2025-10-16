@@ -98,7 +98,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-8">
               <Link
                 to="/"
-                className="font-medium transition hover:text-red-600"
+                className="font-medium transition hover:text-text"
                 onClick={closeDropdown}
               >
                 Home
@@ -110,7 +110,7 @@ export default function Navbar() {
                 onMouseEnter={() => handleMouseEnter("about")}
                 onMouseLeave={handleMouseLeave}
               >
-                <button className="flex items-center gap-1 font-medium transition hover:text-red-600">
+                <button className="flex items-center gap-1 font-medium transition hover:text-text">
                   About Us
                   <ChevronDown
                     className={`w-4 h-4 transition-transform ${
@@ -126,7 +126,7 @@ export default function Navbar() {
                 onMouseEnter={() => handleMouseEnter("services")}
                 onMouseLeave={handleMouseLeave}
               >
-                <button className="flex items-center gap-1 font-medium transition hover:text-red-600">
+                <button className="flex items-center gap-1 font-medium transition hover:text-text">
                   Services
                   <ChevronDown
                     className={`w-4 h-4 transition-transform ${
@@ -142,7 +142,7 @@ export default function Navbar() {
                 onMouseEnter={() => handleMouseEnter("study")}
                 onMouseLeave={handleMouseLeave}
               >
-                <button className="flex items-center gap-1 font-medium transition hover:text-red-600">
+                <button className="flex items-center gap-1 font-medium transition hover:text-text">
                   Study Abroad
                   <ChevronDown
                     className={`w-4 h-4 transition-transform ${
@@ -158,7 +158,7 @@ export default function Navbar() {
                 onMouseEnter={() => handleMouseEnter("more")}
                 onMouseLeave={handleMouseLeave}
               >
-                <button className="flex items-center gap-1 font-medium transition hover:text-red-600">
+                <button className="flex items-center gap-1 font-medium transition hover:text-text">
                   More
                   <ChevronDown
                     className={`w-4 h-4 transition-transform ${
@@ -172,7 +172,7 @@ export default function Navbar() {
             {/* Contact Button */}
             <div className="hidden lg:block">
               <Link to="/contact">
-                <button className="bg-primary text-white px-6 py-2.5 rounded-lg transition font-medium hover:bg-red-700">
+                <button className="bg-text text-white px-6 py-2.5 rounded-lg transition font-medium ">
                   Contact Us
                 </button>
               </Link>
@@ -202,21 +202,21 @@ export default function Navbar() {
                 <div className="max-w-7xl mx-auto px-6 py-8">
                   <div className="grid grid-cols-2 gap-8">
                     {/* Left Side - Featured */}
-                    <div className="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl">
+                    <div className="bg-background p-6 rounded-xl">
                       <div className="flex items-center gap-4">
-                        <div className="bg-red-600 p-3 rounded-lg flex-shrink-0">
+                        <div className="bg-text p-3 rounded-lg flex-shrink-0">
                           <Building2 className="w-8 h-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-gray-800 mb-2">
+                          <h3 className="text-xl font-bold text-text mb-2">
                             About KBM
                           </h3>
-                          <p className="text-gray-700 mb-4">
+                          <p className="text-text mb-4">
                             Learn about our mission, vision, and the team that
                             makes it all possible.
                           </p>
                           <Link to="/about" onClick={closeDropdown}>
-                            <button className="text-red-600 font-semibold hover:underline flex items-center gap-1">
+                            <button className="text-text font-semibold hover:underline flex items-center gap-1">
                               Learn More →
                             </button>
                           </Link>
@@ -235,7 +235,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/about"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               About Us
@@ -244,7 +244,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/about/team"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Our Team
@@ -253,7 +253,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/about/vision"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Mission & Vision
@@ -271,7 +271,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/about/why-choose-us"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Why Choose Us
@@ -280,7 +280,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/about/success-stories"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Success Stories
@@ -289,7 +289,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/about/testimonials"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Testimonials
@@ -319,21 +319,21 @@ export default function Navbar() {
                 <div className="max-w-7xl mx-auto px-6 py-8">
                   <div className="grid grid-cols-2 gap-8">
                     {/* Left Side - Featured */}
-                    <div className="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl">
+                    <div className="bg-background p-6 rounded-xl">
                       <div className="flex items-center gap-4">
-                        <div className="bg-red-600 p-3 rounded-lg flex-shrink-0">
+                        <div className="bg-text p-3 rounded-lg flex-shrink-0">
                           <Briefcase className="w-8 h-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-gray-800 mb-2">
+                          <h3 className="text-xl font-bold text-text mb-2">
                             Our Services
                           </h3>
-                          <p className="text-gray-700 mb-4">
+                          <p className="text-text mb-4">
                             Comprehensive solutions to help you achieve your
                             academic and career goals abroad.
                           </p>
                           <Link to="/services" onClick={closeDropdown}>
-                            <button className="text-red-600 font-semibold hover:underline flex items-center gap-1">
+                            <button className="text-text font-semibold hover:underline flex items-center gap-1">
                               View All Services →
                             </button>
                           </Link>
@@ -352,7 +352,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/services/career-counseling"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Career Counseling
@@ -361,7 +361,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/services/university-selection"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               University Selection
@@ -370,7 +370,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/services/course-guidance"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Course Guidance
@@ -388,7 +388,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/services/visa-assistance"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Visa Assistance
@@ -397,7 +397,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/services/documentation"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Documentation Help
@@ -406,7 +406,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/services/scholarship"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Scholarship Guidance
@@ -436,21 +436,21 @@ export default function Navbar() {
                 <div className="max-w-7xl mx-auto px-6 py-8">
                   <div className="grid grid-cols-2 gap-8">
                     {/* Left Side - Featured */}
-                    <div className="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl">
+                    <div className="bg-background p-6 rounded-xl">
                       <div className="flex items-center gap-4">
-                        <div className="bg-red-600 p-3 rounded-lg flex-shrink-0">
+                        <div className="bg-text p-3 rounded-lg flex-shrink-0">
                           <BookOpen className="w-8 h-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-gray-800 mb-2">
+                          <h3 className="text-xl font-bold text-text mb-2">
                             Start Your Future Abroad
                           </h3>
-                          <p className="text-gray-700 mb-4">
+                          <p className="text-text mb-4">
                             Explore study opportunities in top destinations
                             worldwide with expert guidance.
                           </p>
                           <Link to="/study" onClick={closeDropdown}>
-                            <button className="text-red-600 font-semibold hover:underline flex items-center gap-1">
+                            <button className="text-text font-semibold hover:underline flex items-center gap-1">
                               Learn More →
                             </button>
                           </Link>
@@ -469,25 +469,17 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/study/japan"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Study In Japan
                             </Link>
                           </li>
-                          <li>
-                            <Link
-                              to="/study/korea"
-                              className="text-gray-700 hover:text-red-600 transition block"
-                              onClick={closeDropdown}
-                            >
-                              Study in Korea
-                            </Link>
-                          </li>
+
                           <li>
                             <Link
                               to="/study/australia"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Study in Australia
@@ -496,7 +488,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/study/uk"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Study in United Kingdom
@@ -505,7 +497,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/study/usa"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Study in USA
@@ -514,10 +506,19 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/study/canada"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Study in Canada
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              to="/study"
+                              className="text-gray-700 hover:text-text transition block underline"
+                              onClick={closeDropdown}
+                            >
+                              View All
                             </Link>
                           </li>
                         </ul>
@@ -532,7 +533,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/study/ielts-pte"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               IELTS/PTE
@@ -541,7 +542,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/study/sat"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               SAT
@@ -550,7 +551,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/study/jlpt"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               JLPT
@@ -559,7 +560,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/study/interview-prep"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Interview Preparation
@@ -589,9 +590,9 @@ export default function Navbar() {
                 <div className="max-w-7xl mx-auto px-6 py-8">
                   <div className="grid grid-cols-2 gap-8">
                     {/* Left Side - Featured */}
-                    <div className="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl">
+                    <div className="bg-background p-6 rounded-xl">
                       <div className="flex items-center gap-4">
-                        <div className="bg-red-600 p-3 rounded-lg flex-shrink-0">
+                        <div className="bg-text p-3 rounded-lg flex-shrink-0">
                           <Grid className="w-8 h-8 text-white" />
                         </div>
                         <div>
@@ -616,7 +617,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/gallery"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Gallery
@@ -625,7 +626,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/careers"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Careers
@@ -634,7 +635,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/faq"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               FAQ
@@ -651,7 +652,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/contact"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Contact Support
@@ -660,7 +661,7 @@ export default function Navbar() {
                           <li>
                             <Link
                               to="/terms"
-                              className="text-gray-700 hover:text-red-600 transition block"
+                              className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
                               Terms of Service
@@ -689,7 +690,7 @@ export default function Navbar() {
               <div className="px-6 py-4 space-y-2">
                 <Link
                   to="/"
-                  className="block text-gray-800 hover:text-red-600 font-medium py-2"
+                  className="block text-gray-800 hover:text-text font-medium py-2"
                   onClick={closeDropdown}
                 >
                   Home
@@ -705,7 +706,7 @@ export default function Navbar() {
                           : "about-mobile"
                       )
                     }
-                    className="flex items-center justify-between w-full text-gray-800 hover:text-red-600 font-medium py-2"
+                    className="flex items-center justify-between w-full text-gray-800 hover:text-text font-medium py-2"
                   >
                     About Us
                     <ChevronDown
@@ -725,42 +726,42 @@ export default function Navbar() {
                         <div className="pl-4 space-y-2 pt-2 pb-2">
                           <Link
                             to="/about"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             About Us
                           </Link>
                           <Link
                             to="/about/team"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Our Team
                           </Link>
                           <Link
                             to="/about/vision"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Mission & Vision
                           </Link>
                           <Link
                             to="/about/why-choose-us"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Why Choose Us
                           </Link>
                           <Link
                             to="/about/success-stories"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Success Stories
                           </Link>
                           <Link
                             to="/about/testimonials"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Testimonials
@@ -781,7 +782,7 @@ export default function Navbar() {
                           : "study-mobile"
                       )
                     }
-                    className="flex items-center justify-between w-full text-gray-800 hover:text-red-600 font-medium py-2"
+                    className="flex items-center justify-between w-full text-gray-800 hover:text-text font-medium py-2"
                   >
                     Study Abroad
                     <ChevronDown
@@ -801,77 +802,71 @@ export default function Navbar() {
                         <div className="pl-4 space-y-2 pt-2 pb-2">
                           <Link
                             to="/study"
-                            className="block text-gray-700 hover:text-red-600 py-1 font-medium"
+                            className="block text-gray-700 hover:text-text py-1 font-medium"
                             onClick={closeDropdown}
                           >
                             Study Abroad Overview
                           </Link>
                           <Link
                             to="/study/japan"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Study in Japan
                           </Link>
-                          <Link
-                            to="/study/korea"
-                            className="block text-gray-700 hover:text-red-600 py-1"
-                            onClick={closeDropdown}
-                          >
-                            Study in Korea
-                          </Link>
+
                           <Link
                             to="/study/australia"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Study in Australia
                           </Link>
                           <Link
                             to="/study/uk"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Study in UK
                           </Link>
                           <Link
                             to="/study/usa"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Study in USA
                           </Link>
                           <Link
                             to="/study/canada"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Study in Canada
                           </Link>
                           <Link
                             to="/study/ielts-pte"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             IELTS/PTE
                           </Link>
                           <Link
                             to="/study/sat"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             SAT
                           </Link>
                           <Link
                             to="/study/jlpt"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             JLPT
                           </Link>
                           <Link
                             to="/study/interview-prep"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Interview Preparation
@@ -890,7 +885,7 @@ export default function Navbar() {
                         activeDropdown === "more-mobile" ? null : "more-mobile"
                       )
                     }
-                    className="flex items-center justify-between w-full text-gray-800 hover:text-red-600 font-medium py-2"
+                    className="flex items-center justify-between w-full text-gray-800 hover:text-text font-medium py-2"
                   >
                     More
                     <ChevronDown
@@ -910,35 +905,35 @@ export default function Navbar() {
                         <div className="pl-4 space-y-2 pt-2 pb-2">
                           <Link
                             to="/gallery"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Gallery
                           </Link>
                           <Link
                             to="/careers"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Careers
                           </Link>
                           <Link
                             to="/faq"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             FAQ
                           </Link>
                           <Link
                             to="/contact"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Contact Support
                           </Link>
                           <Link
                             to="/terms"
-                            className="block text-gray-700 hover:text-red-600 py-1"
+                            className="block text-gray-700 hover:text-text py-1"
                             onClick={closeDropdown}
                           >
                             Terms of Service
@@ -950,7 +945,7 @@ export default function Navbar() {
                 </div>
 
                 <Link to="/contact" onClick={closeDropdown}>
-                  <button className="w-full bg-primary text-white px-6 py-3 rounded-lg transition font-medium mt-4 hover:bg-red-700">
+                  <button className="w-full bg-text text-white px-6 py-3 rounded-lg transition font-medium mt-4">
                     Contact Us
                   </button>
                 </Link>

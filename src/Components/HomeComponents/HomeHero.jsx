@@ -9,36 +9,35 @@ export default function HomeHero() {
   const mediaItems = [
     {
       id: 1,
-      title: "Lorem Ipsum",
+      title: "Study In Japan 🇯🇵",
       subtitle:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, hic!",
-      image: "/Uploads/home/one.jpeg",
-      video:
-        "https://res.cloudinary.com/dxo8kfpp0/video/upload/v1758869290/hero_yovnc6.mov",
+      image: "/Uploads/home/hero/japan.png",
+      video: "Uploads/home/hero.mp4",
     },
     {
       id: 2,
-      title: "Lorem Ipsum",
+      title: "Study In USA 🇺🇸",
       subtitle:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, hic!",
-      image: "/Uploads/home/two.jpeg",
-      video: "https://example.com/video2.mp4",
+      image: "/Uploads/home/hero/usa.jpg",
+      video: "Uploads/home/hero.mp4",
     },
     {
       id: 3,
-      title: "Lorem Ipsum",
+      title: "Study In Australia 🇦🇺",
       subtitle:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, hic!",
       image: "/Uploads/home/three.jpeg",
-      video: "https://example.com/video3.mp4",
+      video: "Uploads/home/hero.mp4",
     },
     {
       id: 4,
-      title: "Lorem Ipsum",
+      title: "Study in Canada 🇨🇦",
       subtitle:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, hic!",
       image: "/Uploads/home/four.jpeg",
-      video: "https://example.com/video4.mp4",
+      video: "Uploads/home/hero.mp4",
     },
   ];
 
@@ -79,30 +78,13 @@ export default function HomeHero() {
     <>
       <section className="relative h-[85vh] overflow-hidden mx-6 my-6 rounded-4xl mt-[12vh]">
         {/* Background Image */}
-        <div
-          className="absolute inset-0 w-full h-full bg-cover bg-left "
-          style={{
-            backgroundImage: "url('/Uploads/home/hero3.jpg')",
-            zIndex: 0,
-          }}
-        >
-          <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 w-full h-full bg-cover bg-left ">
+          <video autoPlay muted loop className="h-full w-full object-cover">
+            <source src="Uploads/home/hero.mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-black/20 to-black"></div>
         </div>
-        {/* 
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ zIndex: 0 }}
-        >
-          <source src="/Uploads/home/hero-video.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/30"></div>
-        */}
 
-        {/* Main Content Grid */}
         {/* Main Content Grid */}
         <div className="relative z-10 h-full flex flex-col px-8 lg:px-20 max-w-[1600px] mx-auto">
           {/* Top Section - Hero Content */}
@@ -110,37 +92,54 @@ export default function HomeHero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col justify-center text-white pt-12 lg:pt-20"
+            className="flex flex-col justify-center items-start text-white pt-12 lg:pt-20 space-y-6"
           >
+            {/* Tagline */}
+            {/* <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-text backdrop-blur-sm text-white rounded-full inline-block py-2 px-6 text-sm md:text-base font-medium tracking-wide shadow-sm"
+            >
+              Study, Work, and Grow Worldwide
+            </motion.div> */}
+
+            {/* Title */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl lg:text-7xl font-extrabold mb-6 lg:mb-8 tracking-wider leading-tight"
+              className="text-4xl lg:text-7xl font-extrabold tracking-tight leading-tight line-clamp-3"
               style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
             >
-              Study Abroad
-              <br />
+              Your Global Pathway <br className="hidden sm:block" /> to
+              Education & Career
             </motion.h1>
+
+            {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-base lg:text-xl mb-8 lg:mb-12 text-white/90 font-light tracking-wide max-w-2xl"
+              className="text-base lg:text-xl max-w-2xl text-white/90 font-light tracking-wide line-clamp-4"
             >
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              eum nemo velit sint reiciendis illo, libero quam nesciunt
-              laboriosam, doloribus dignissimos ratione a ipsum recusandae.
+              We help students and professionals achieve their dreams abroad —
+              whether it's Japan, USA, Australia, UK, Canada, or other
+              countries. From visas and documentation to pre-departure guidance
+              and cultural adaptation, we support you at every step of your
+              international journey.
             </motion.p>
+
+            {/* CTA Button */}
             <motion.button
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-gray-900 px-10 py-4 rounded-md font-bold hover:bg-gray-100 transition w-fit tracking-wider text-sm"
+              className="bg-text text-white px-10 py-4 rounded-lg font-extrabold transition w-fit tracking-wider text-md"
             >
-              Get Started
+              Start Your Global Journey
             </motion.button>
           </motion.div>
 
@@ -176,20 +175,17 @@ export default function HomeHero() {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <motion.div
                       whileHover={{ scale: 1.15 }}
-                      className="bg-orange-500 rounded-full p-4 shadow-lg"
+                      className=" rounded-full p-4 shadow-lg"
                     >
                       <Play className="w-7 h-7 text-white fill-white" />
                     </motion.div>
                   </div>
 
                   {/* Text Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl font-medium mb-1 tracking-wide">
+                  <div className="absolute bottom-0 left-0 right-0 px-6 py-2 text-white">
+                    <h3 className="text-xl font-medium tracking-wide">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-white/80 font-light tracking-wide">
-                      {item.subtitle}
-                    </p>
                   </div>
                 </motion.div>
               ))}

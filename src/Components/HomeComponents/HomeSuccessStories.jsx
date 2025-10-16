@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function HomeSuccessStories() {
   const stories = [
@@ -39,9 +40,11 @@ export default function HomeSuccessStories() {
 
       {/* Button */}
       <div className="text-center mt-10">
-        <button className="px-6 py-3 bg-background text-text text-lg font-semibold rounded-full ">
-          See More Stories
-        </button>
+        <Link to="/about/success-stories">
+          <button className="px-6 py-3 bg-background text-text text-lg font-semibold rounded-full ">
+            See More Stories
+          </button>
+        </Link>
       </div>
     </section>
   );
