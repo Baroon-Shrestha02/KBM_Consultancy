@@ -20,6 +20,8 @@ import AusMain from "./Components/StudyComponents/Australia/AusMain";
 import UkMain from "./Components/StudyComponents/UK/UkMain";
 import CadMain from "./Components/StudyComponents/Canada/CadMain";
 import UsMain from "./Components/StudyComponents/USA/UsMain";
+import TestsMain from "./Components/TestsComponents/TestsMain";
+import ContactMain from "./Components/ContactComponents/ContactMain";
 
 function App() {
   return (
@@ -37,7 +39,6 @@ function App() {
         <Route element={<AboutWhyMain />} path="/about/why-choose-us" />
 
         <Route element={<ServicesPage />} path="/services" />
-        <Route element={<ContactPage />} path="/contact" />
 
         <Route element={<StudyPage />} path="/study" />
         <Route element={<JapanMain />} path="/study/japan" />
@@ -47,6 +48,10 @@ function App() {
         <Route element={<UsMain />} path="/study/usa" />
 
         <Route element={<FaqMain />} path="/faq" />
+
+        <Route element={<TestsMain />} path="/tests" />
+
+        <Route element={<ContactPage />} path="/contact" />
       </Routes>
       {/* <Footer /> */}
       <Footer2 />

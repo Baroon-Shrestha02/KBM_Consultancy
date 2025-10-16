@@ -12,7 +12,7 @@ export default function HomeSuccessStories() {
   ];
 
   return (
-    <section className="py-12 px-4 bg-gray-50">
+    <section className="py-12 px-4 bg-gray-50 m-6 rounded-4xl">
       <div className="text-center mb-10">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-text">
           Results that Speak Volume

@@ -4,7 +4,7 @@ import { GraduationCap, DollarSign, FileText, Globe } from "lucide-react";
 import ReqAccordion from "../../HelperComponents/StudyReq/ReqAccordion";
 
 const australiaData = {
-  title: "Study in Australia",
+  title: "Requirements to Study in Australia 🇦🇺",
   subtitle:
     "Find out what you need to apply for your Australian student visa and start your studies in one of the world's best education systems.",
   backgroundImage:

@@ -566,6 +566,15 @@ export default function Navbar() {
                               Interview Preparation
                             </Link>
                           </li>
+                          <li>
+                            <Link
+                              to="/tests"
+                              className="text-gray-700 hover:text-text transition block underline"
+                              onClick={closeDropdown}
+                            >
+                              View All
+                            </Link>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -623,15 +632,7 @@ export default function Navbar() {
                               Gallery
                             </Link>
                           </li>
-                          <li>
-                            <Link
-                              to="/careers"
-                              className="text-gray-700 hover:text-text transition block"
-                              onClick={closeDropdown}
-                            >
-                              Careers
-                            </Link>
-                          </li>
+
                           <li>
                             <Link
                               to="/faq"
@@ -909,13 +910,6 @@ export default function Navbar() {
                             onClick={closeDropdown}
                           >
                             Gallery
-                          </Link>
-                          <Link
-                            to="/careers"
-                            className="block text-gray-700 hover:text-text py-1"
-                            onClick={closeDropdown}
-                          >
-                            Careers
                           </Link>
                           <Link
                             to="/faq"

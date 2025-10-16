@@ -45,7 +45,7 @@ export default function HomeTestimonials() {
 
   return (
     <>
-      <section className="px-4 sm:px-6 lg:px-8 my-12">
+      <section className="px-4 sm:px-6 lg:px-8 my-12 mx-6">
         <div className="text-center text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 sm:mb-10">
           <h1 className="mb-3 text-text">Transforming Futures</h1>
           <h2 className="text-text/80 text-2xl sm:text-3xl lg:text-4xl">

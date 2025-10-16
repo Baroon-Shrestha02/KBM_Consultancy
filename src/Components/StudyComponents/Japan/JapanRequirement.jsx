@@ -3,7 +3,7 @@ import { GraduationCap, DollarSign, FileText, Globe } from "lucide-react";
 import ReqAccordion from "../../HelperComponents/StudyReq/ReqAccordion";
 
 const japanData = {
-  title: "Study in Japan",
+  title: "Requirement to Study in Japan 🇯🇵",
   subtitle:
     "Understand all key requirements before applying for your Japanese student visa.",
   backgroundImage:

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function AboutIntro() {
   return (
-    <section className="relative bg-white text-black overflow-hidden min-h-screen">
+    <section className="relative bg-white text-black overflow-hidden ">
       {/* Angled Background with Parallax Effect */}
       <motion.div
         className="absolute inset-0 w-full h-[75vh]"
@@ -146,14 +146,6 @@ export default function AboutIntro() {
                 />
               </div>
 
-              <motion.div
-                className="w-24 h-1.5 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full mb-6"
-                initial={{ width: 0 }}
-                whileInView={{ width: 96 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.5 }}
-              />
-
               <motion.h1
                 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-6 text-gray-900 leading-tight relative"
                 initial={{ opacity: 0, y: -30 }}
@@ -166,13 +158,6 @@ export default function AboutIntro() {
                   <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                     KBM Education
                   </span>
-                  <motion.div
-                    className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full"
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
-                  />
                 </span>{" "}
                 Consultancy
               </motion.h1>
@@ -197,10 +182,9 @@ export default function AboutIntro() {
                   eligendi tempore magnam repellendus, cupiditate ea, eius
                   numquam suscipit explicabo.
                 </p>
-                <p>
-                  Eaque non omnis quaerat blanditiis eum provident perferendis,
-                  ab possimus id libero soluta quis ratione quam esse rem
-                  mollitia iure consequuntur ut officiis fuga aspernatur.
+                <p className="italic">
+                  "Eaque non omnis quaerat blanditiis eum provident perferendis,
+                  ab possimus id libero soluta quis ratione quam esse rem "
                 </p>
               </motion.div>
             </div>
