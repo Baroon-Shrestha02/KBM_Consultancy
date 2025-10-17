@@ -5,7 +5,7 @@ export default function UsHero() {
   return (
     <div>
       <StudyHero
-        bgImg="/Uploads/home/hero.avif"
+        bgImg="/Uploads/study/us/us.png"
         title="USA 🇺🇸"
         description="Lulu and Georgia is a contemporary interior design and home
                     decor company celebrated for its chic, modern aesthetic with

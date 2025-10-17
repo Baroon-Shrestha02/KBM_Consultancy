@@ -18,7 +18,7 @@ export default function WhyUS() {
     <StudyWhy
       title="Why Choose the US 🇺🇸"
       description="The United States provides excellent education, professional opportunities, and global recognition — making it ideal for ambitious students and professionals."
-      backgroundImage="/Uploads/home/hero/us.png"
+      backgroundImage="/Uploads/study/us/uswhy.jpg"
       reasons={usReasons}
     />
   );

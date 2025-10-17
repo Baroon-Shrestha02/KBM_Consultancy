@@ -83,14 +83,15 @@ export default function Navbar() {
         initial={{ y: 0 }}
         animate={{ y: isVisible ? 0 : -100 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md"
+        className="fixed top-0 left-0 right-0 z-60 bg-white shadow-md"
       >
         <div className="w-full bg-white text-primary px-6">
           <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link to="/" className="text-2xl font-bold">
-                Logo
+                {/* <img src="/Uploads/main/logo.png" alt="" /> */}
+                logo
               </Link>
             </div>
 
@@ -369,29 +370,11 @@ export default function Navbar() {
                           </li>
                           <li>
                             <Link
-                              to="/services/course-guidance"
+                              to="/services/scholarship"
                               className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
                             >
-                              Course Guidance
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
-                          <FileText className="w-5 h-5" />
-                          Application Support
-                        </h4>
-                        <ul className="space-y-2">
-                          <li>
-                            <Link
-                              to="/services/visa-assistance"
-                              className="text-gray-700 hover:text-text transition block"
-                              onClick={closeDropdown}
-                            >
-                              Visa Assistance
+                              Scholarship Guidance
                             </Link>
                           </li>
                           <li>
@@ -401,15 +384,6 @@ export default function Navbar() {
                               onClick={closeDropdown}
                             >
                               Documentation Help
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to="/services/scholarship"
-                              className="text-gray-700 hover:text-text transition block"
-                              onClick={closeDropdown}
-                            >
-                              Scholarship Guidance
                             </Link>
                           </li>
                         </ul>
@@ -468,6 +442,15 @@ export default function Navbar() {
                         <ul className="space-y-2">
                           <li>
                             <Link
+                              to="/study"
+                              className="text-gray-700 hover:text-text transition block text-lg"
+                              onClick={closeDropdown}
+                            >
+                              View Overview
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
                               to="/study/japan"
                               className="text-gray-700 hover:text-text transition block"
                               onClick={closeDropdown}
@@ -510,69 +493,6 @@ export default function Navbar() {
                               onClick={closeDropdown}
                             >
                               Study in Canada
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to="/study"
-                              className="text-gray-700 hover:text-text transition block underline"
-                              onClick={closeDropdown}
-                            >
-                              View All
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
-                          <Newspaper className="w-5 h-5" />
-                          Test Preparation
-                        </h4>
-                        <ul className="space-y-2">
-                          <li>
-                            <Link
-                              to="/study/ielts-pte"
-                              className="text-gray-700 hover:text-text transition block"
-                              onClick={closeDropdown}
-                            >
-                              IELTS/PTE
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to="/study/sat"
-                              className="text-gray-700 hover:text-text transition block"
-                              onClick={closeDropdown}
-                            >
-                              SAT
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to="/study/jlpt"
-                              className="text-gray-700 hover:text-text transition block"
-                              onClick={closeDropdown}
-                            >
-                              JLPT
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to="/study/interview-prep"
-                              className="text-gray-700 hover:text-text transition block"
-                              onClick={closeDropdown}
-                            >
-                              Interview Preparation
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to="/tests"
-                              className="text-gray-700 hover:text-text transition block underline"
-                              onClick={closeDropdown}
-                            >
-                              View All
                             </Link>
                           </li>
                         </ul>
@@ -677,7 +597,7 @@ export default function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-white border-t border-gray-200 max-h-[calc(100vh-5rem)] overflow-y-auto"
+              className="lg:hidden bg-white border-t border-gray-200 fixed top-20 left-0 right-0 bottom-0 overflow-y-auto"
             >
               <div className="px-6 py-4 space-y-2">
                 <Link
@@ -764,6 +684,82 @@ export default function Navbar() {
                   </AnimatePresence>
                 </div>
 
+                {/* Services Accordion */}
+                <div className="border-t pt-2">
+                  <button
+                    onClick={() =>
+                      setActiveDropdown(
+                        activeDropdown === "services-mobile"
+                          ? null
+                          : "services-mobile"
+                      )
+                    }
+                    className="flex items-center justify-between w-full text-gray-800 hover:text-text font-medium py-2"
+                  >
+                    Services
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform ${
+                        activeDropdown === "services-mobile" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {activeDropdown === "services-mobile" && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pl-4 space-y-2 pt-2 pb-2">
+                          <Link
+                            to="/services"
+                            className="block text-gray-700 hover:text-text py-1 font-medium"
+                            onClick={closeDropdown}
+                          >
+                            Services Overview
+                          </Link>
+                          <Link
+                            to="/services/career-counseling"
+                            className="block text-gray-700 hover:text-text py-1"
+                            onClick={closeDropdown}
+                          >
+                            Career Counseling
+                          </Link>
+                          <Link
+                            to="/services/university-selection"
+                            className="block text-gray-700 hover:text-text py-1"
+                            onClick={closeDropdown}
+                          >
+                            University Selection
+                          </Link>
+                          <Link
+                            to="/services/visa-assistance"
+                            className="block text-gray-700 hover:text-text py-1"
+                            onClick={closeDropdown}
+                          >
+                            Visa Assistance
+                          </Link>
+                          <Link
+                            to="/services/documentation"
+                            className="block text-gray-700 hover:text-text py-1"
+                            onClick={closeDropdown}
+                          >
+                            Documentation Help
+                          </Link>
+                          <Link
+                            to="/services/scholarship"
+                            className="block text-gray-700 hover:text-text py-1"
+                            onClick={closeDropdown}
+                          >
+                            Scholarship Guidance
+                          </Link>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
                 {/* Study Abroad Accordion */}
                 <div className="border-t pt-2">
                   <button
@@ -806,7 +802,6 @@ export default function Navbar() {
                           >
                             Study in Japan
                           </Link>
-
                           <Link
                             to="/study/australia"
                             className="block text-gray-700 hover:text-text py-1"
@@ -834,34 +829,6 @@ export default function Navbar() {
                             onClick={closeDropdown}
                           >
                             Study in Canada
-                          </Link>
-                          <Link
-                            to="/study/ielts-pte"
-                            className="block text-gray-700 hover:text-text py-1"
-                            onClick={closeDropdown}
-                          >
-                            IELTS/PTE
-                          </Link>
-                          <Link
-                            to="/study/sat"
-                            className="block text-gray-700 hover:text-text py-1"
-                            onClick={closeDropdown}
-                          >
-                            SAT
-                          </Link>
-                          <Link
-                            to="/study/jlpt"
-                            className="block text-gray-700 hover:text-text py-1"
-                            onClick={closeDropdown}
-                          >
-                            JLPT
-                          </Link>
-                          <Link
-                            to="/study/interview-prep"
-                            className="block text-gray-700 hover:text-text py-1"
-                            onClick={closeDropdown}
-                          >
-                            Interview Preparation
                           </Link>
                         </div>
                       </motion.div>

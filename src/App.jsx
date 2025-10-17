@@ -1,18 +1,17 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
 import ServicesPage from "./Pages/ServicesPage";
 import Form from "./Components/HelperComponents/Form";
 import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
+import Footer2 from "./Components/Footer2";
 import StudyPage from "./Pages/StudyPage";
 import Team from "./Components/AboutComponents/SubPages/Team/Team";
 import VisionIndex from "./Components/AboutComponents/SubPages/Vision/VisionIndex";
 import ScrollToTop from "./Components/HelperComponents/ScrollToTop";
 import TestimonialsMain from "./Components/AboutComponents/SubPages/Testimonials/TestimonialsMain";
 import SuccessStories from "./Components/AboutComponents/SubPages/SuccessStories/SuccessStories";
-import Footer2 from "./Components/Footer2";
 import AboutWhyMain from "./Components/AboutComponents/SubPages/Why/AboutWhyMain";
 import FaqMain from "./Components/FAQComponents/FaqMain";
 import JapanMain from "./Components/StudyComponents/Japan/JapanMain";
@@ -24,14 +23,25 @@ import TestsMain from "./Components/TestsComponents/TestsMain";
 import ContactMain from "./Components/ContactComponents/ContactMain";
 import GalleryPage from "./Pages/GalleryPage";
 import { Toaster } from "react-hot-toast";
+import CounsellingMain from "./Components/ServicesComponents/SubPages/Counselling/CounsellingMain";
+import UniSelmain from "./Components/ServicesComponents/SubPages/UniversitySelection/UniSelmain";
+import NotFound from "./Components/HelperComponents/NotFound";
 
 function App() {
+  const location = useLocation();
+
+  // Paths where Navbar and Footer should be hidden
+  const hideLayout =
+    location.pathname === "/not-found" || location.pathname === "*";
+
   return (
     <>
       <Toaster position="top" />
       <ScrollToTop />
-      <Navbar />
-      <Form />
+
+      {!hideLayout && <Navbar />}
+      {!hideLayout && <Form />}
+
       <Routes>
         <Route element={<HomePage />} path="/" />
         <Route element={<AboutPage />} path="/about" />
@@ -42,6 +52,11 @@ function App() {
         <Route element={<AboutWhyMain />} path="/about/why-choose-us" />
 
         <Route element={<ServicesPage />} path="/services" />
+        <Route element={<UniSelmain />} path="/services/university-selection" />
+        <Route
+          element={<CounsellingMain />}
+          path="/services/career-counseling"
+        />
 
         <Route element={<StudyPage />} path="/study" />
         <Route element={<JapanMain />} path="/study/japan" />
@@ -51,14 +66,16 @@ function App() {
         <Route element={<UsMain />} path="/study/usa" />
 
         <Route element={<FaqMain />} path="/faq" />
-
         <Route element={<TestsMain />} path="/tests" />
-
         <Route element={<GalleryPage />} path="/gallery" />
         <Route element={<ContactPage />} path="/contact" />
+
+        {/* 404 Page */}
+        <Route path="/not-found" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/not-found" replace />} />
       </Routes>
-      {/* <Footer /> */}
-      <Footer2 />
+
+      {!hideLayout && <Footer2 />}
     </>
   );
 }

@@ -18,7 +18,7 @@ export default function WhyUK() {
     <StudyWhy
       title="Why Choose the UK 🇬🇧"
       description="The UK is a top destination for higher education and international careers, offering world-class universities, rich culture, and excellent global exposure."
-      backgroundImage="/Uploads/home/hero/uk.png"
+      backgroundImage="/Uploads/study/uk/whyuk.jpg"
       reasons={ukReasons}
     />
   );

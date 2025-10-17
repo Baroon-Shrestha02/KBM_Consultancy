@@ -19,3 +19,12 @@
 * {
   font-family: "quick", "sans-serif";
 }
+
+/* Hide scrollbar when needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

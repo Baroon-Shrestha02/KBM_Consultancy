@@ -18,7 +18,7 @@ export default function CadWhy() {
     <StudyWhy
       title="Why Choose Canada 🇨🇦"
       description="Canada is known for its top-quality education, safe environment, and excellent career opportunities, making it a top choice for international students."
-      backgroundImage="/Uploads/home/hero/canada.png"
+      backgroundImage="/Uploads/study/cad/cadwhy.webp"
       reasons={canadaReasons}
     />
   );

@@ -7,8 +7,7 @@ const australiaData = {
   title: "Requirements to Study in UK 🇬🇧",
   subtitle:
     "Find out what you need to apply for your Australian student visa and start your studies in one of the world's best education systems.",
-  backgroundImage:
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920", // coastal Australia vibe 🌊
+  backgroundImage: "/Uploads/study/uk/ukreq.jpg",
   ctaText: "Apply Now",
   accentColor: "text-sky-400",
   items: [

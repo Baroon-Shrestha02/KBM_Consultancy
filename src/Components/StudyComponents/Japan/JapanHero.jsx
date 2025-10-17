@@ -5,7 +5,7 @@ export default function JapanHero() {
   return (
     <div>
       <StudyHero
-        bgImg="/Uploads/home/hero.avif"
+        bgImg="/Uploads/study/jap/jap.jpg"
         title="Japan 🇯🇵"
         description="Lulu and Georgia is a contemporary interior design and home
                     decor company celebrated for its chic, modern aesthetic with

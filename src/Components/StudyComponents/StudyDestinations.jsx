@@ -1,10 +1,12 @@
 import { PlaneTakeoff, ArrowRight, GraduationCap } from "lucide-react";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const destinations = [
   {
     id: 1,
     location: "Australia",
+    href: "/study/australia",
     flag: "🇦🇺",
     desc: "Known for its world-class universities and multicultural environment, Australia offers students a relaxed lifestyle, strong academic standards, and post-study work opportunities.",
     highlights: ["Top Universities", "Work Opportunities", "Beach Lifestyle"],
@@ -12,6 +14,7 @@ const destinations = [
   {
     id: 2,
     location: "USA",
+    href: "/study/usa",
     flag: "🇺🇸",
     desc: "Home to top-ranked universities and cutting-edge research facilities, the United States provides endless opportunities for innovation, career growth, and cultural diversity.",
     highlights: ["Ivy League", "Research Hub", "Tech Innovation"],
@@ -19,6 +22,7 @@ const destinations = [
   {
     id: 3,
     location: "United Kingdom",
+    href: "/study/uk",
     flag: "🇬🇧",
     desc: "With a strong academic heritage and globally recognized degrees, the UK offers a rich cultural experience, shorter study durations, and excellent global employability.",
     highlights: [
@@ -30,6 +34,7 @@ const destinations = [
   {
     id: 4,
     location: "Canada",
+    href: "/study/canada",
     flag: "🇨🇦",
     desc: "Canada stands out for its high-quality education system, affordable tuition, and welcoming immigration policies that make it a top choice for international students.",
     highlights: ["Affordable Tuition", "PR Pathways", "Safe Environment"],
@@ -37,6 +42,7 @@ const destinations = [
   {
     id: 5,
     location: "Japan",
+    href: "/study/japan",
     flag: "🇯🇵",
     desc: "Blending tradition and technology, Japan offers unique educational experiences, government scholarships, and career opportunities in one of Asia's most advanced nations.",
     highlights: ["Tech Leader", "Scholarships", "Rich Culture"],
@@ -44,6 +50,7 @@ const destinations = [
   {
     id: 6,
     location: "Korea",
+    href: "#",
     flag: "🇰🇷",
     desc: "South Korea combines cutting-edge innovation, affordable tuition, and a vibrant culture, making it a fast-rising destination for international learners.",
     highlights: ["K-Innovation", "Affordable", "Dynamic Culture"],
@@ -124,49 +131,42 @@ export default function StudyDestinations() {
               {/* Hover Background Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="relative z-10 flex flex-col h-full">
-                {/* Flag and Location */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <span className="text-5xl transform group-hover:scale-110 transition-transform duration-300">
-                      {item.flag}
-                    </span>
-                    <h3 className="text-2xl font-bold text-gray-800 group-hover:text-indigo-600 transition-colors">
-                      {item.location}
-                    </h3>
+              <Link to={item.href}>
+                <div className="relative z-10 flex flex-col h-full">
+                  {/* Flag and Location */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <span className="text-5xl transform group-hover:scale-110 transition-transform duration-300">
+                        {item.flag}
+                      </span>
+                      <h3 className="text-2xl font-bold text-gray-800 group-hover:text-indigo-600 transition-colors">
+                        {item.location}
+                      </h3>
+                    </div>
+                    <ArrowRight
+                      className="text-indigo-500 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300"
+                      size={24}
+                    />
                   </div>
-                  <ArrowRight
-                    className="text-indigo-500 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300"
-                    size={24}
-                  />
+
+                  {/* Highlights Pills */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {item.highlights.map((highlight, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 text-xs font-semibold bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 rounded-full border border-indigo-200"
+                      >
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                    {item.desc}
+                  </p>
                 </div>
-
-                {/* Highlights Pills */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {item.highlights.map((highlight, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 text-xs font-semibold bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 rounded-full border border-indigo-200"
-                    >
-                      {highlight}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
-                  {item.desc}
-                </p>
-
-                {/* CTA Button */}
-                <button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl shadow-md hover:shadow-lg transform transition-all duration-300 flex items-center justify-center gap-2 group/btn mt-auto">
-                  <span>Explore Programs</span>
-                  <ArrowRight
-                    size={18}
-                    className="transform group-hover/btn:translate-x-1 transition-transform"
-                  />
-                </button>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
