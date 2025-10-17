@@ -1,10 +1,11 @@
 import React from "react";
-import Index from "../Components/HomeComponents";
+
+import HomeMain from "../Components/HomeComponents/HomeMain";
 
 export default function HomePage() {
   return (
     <div>
-      <Index />
+      <HomeMain />
     </div>
   );
 }
