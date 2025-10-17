@@ -22,10 +22,13 @@ import CadMain from "./Components/StudyComponents/Canada/CadMain";
 import UsMain from "./Components/StudyComponents/USA/UsMain";
 import TestsMain from "./Components/TestsComponents/TestsMain";
 import ContactMain from "./Components/ContactComponents/ContactMain";
+import GalleryPage from "./Pages/GalleryPage";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <>
+      <Toaster position="top" />
       <ScrollToTop />
       <Navbar />
       <Form />
@@ -51,6 +54,7 @@ function App() {
 
         <Route element={<TestsMain />} path="/tests" />
 
+        <Route element={<GalleryPage />} path="/gallery" />
         <Route element={<ContactPage />} path="/contact" />
       </Routes>
       {/* <Footer /> */}

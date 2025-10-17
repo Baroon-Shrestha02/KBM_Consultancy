@@ -247,7 +247,7 @@ export default function ReqAccordion({
         </div>
 
         {/* CTA Button */}
-        {ctaText && (
+        {/* {ctaText && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -263,7 +263,7 @@ export default function ReqAccordion({
               {ctaText}
             </motion.button>
           </motion.div>
-        )}
+        )} */}
       </div>
     </section>
   );

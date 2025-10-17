@@ -10,7 +10,7 @@ import {
   Globe,
 } from "lucide-react";
 
-export default function ContactForm() {
+export default function UKForm() {
   const [formData, setFormData] = useState({
     inquiryPurpose: "",
     description: "",
@@ -76,65 +76,14 @@ ${formData.message || "No message provided"}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-8 mx-6 rounded-4xl my-10">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-5xl text-center font-bold text-slate-800 mb-12">
-          Let's Get In Touch
-        </h1>
-
-        {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {/* Phone */}
-          <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-              <Phone className="w-6 h-6 text-slate-600" />
-            </div>
-            <button
-              onClick={() => handleCopyPhone("+977 9800000000")}
-              className="text-slate-600 hover:text-slate-800 transition-colors text-left block mb-2 w-full"
-            >
-              +977 9800000000
-            </button>
-            {copiedPhone && (
-              <p className="text-xs text-green-600 mt-2">
-                Copied to clipboard!
-              </p>
-            )}
-          </div>
-
-          {/* Email */}
-          <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-              <Mail className="w-6 h-6 text-slate-600" />
-            </div>
-            <button
-              onClick={() => handleEmailClick("inquiry@semla.edu.np")}
-              className="text-slate-600 hover:text-slate-800 transition-colors text-left block mb-2 w-full"
-            >
-              inquiry@semla.edu.np
-            </button>
-          </div>
-
-          {/* Location */}
-          <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-              <MapPin className="w-6 h-6 text-slate-600" />
-            </div>
-            <button
-              onClick={handleLocationClick}
-              className="text-slate-600 hover:text-slate-800 transition-colors text-left block"
-            >
-              Baneshwor, Kathmandu
-            </button>
-          </div>
-        </div>
-
         {/* Divider */}
-        <div className="flex items-center">
+        {/* <div className="flex items-center">
           <div className="flex-1 h-px bg-gray-300" />
           <span className="px-4 text-3xl text-gray-500 font-semibold">OR</span>
           <div className="flex-1 h-px bg-gray-300" />
-        </div>
+        </div> */}
 
-        <h2 className="text-3xl font-bold text-center text-slate-800 mb-8">
+        <h2 className="text-4xl md:text-6xl font-extrabold text-center text-slate-800 mb-8">
           <br /> Fill out the form below
         </h2>
 
@@ -181,7 +130,7 @@ ${formData.message || "No message provided"}
             {/* Preferred Country */}
             <div>
               <label className="block text-slate-700 font-medium mb-2">
-                Preferred Country
+                Preferred University
               </label>
               <div className="relative">
                 <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
@@ -191,12 +140,38 @@ ${formData.message || "No message provided"}
                   onChange={handleInputChange}
                   className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-slate-400 text-slate-700"
                 >
-                  <option value="">Select your preferred country...</option>
-                  <option value="Japan">Japan</option>
-                  <option value="Australia">Australia</option>
-                  <option value="UK">UK</option>
-                  <option value="USA">USA</option>
-                  <option value="Canada">Canada</option>
+                  <option value="">Select your preferred university...</option>
+                  <option value="University of Oxford">
+                    University of Oxford
+                  </option>
+                  <option value="University of Cambridge">
+                    University of Cambridge
+                  </option>
+                  <option value="Imperial College London">
+                    Imperial College London
+                  </option>
+                  <option value="London School of Economics and Political Science">
+                    London School of Economics and Political Science
+                  </option>
+                  <option value="University College London">
+                    University College London
+                  </option>
+                  <option value="University of Edinburgh">
+                    University of Edinburgh
+                  </option>
+                  <option value="University of Manchester">
+                    University of Manchester
+                  </option>
+                  <option value="University of Glasgow">
+                    University of Glasgow
+                  </option>
+                  <option value="King's College London">
+                    King's College London
+                  </option>
+                  <option value="University of Warwick">
+                    University of Warwick
+                  </option>
+
                   <option value="Other">Other</option>
                 </select>
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
@@ -210,7 +185,7 @@ ${formData.message || "No message provided"}
                   name="customCountry"
                   value={formData.customCountry}
                   onChange={handleInputChange}
-                  placeholder="Enter your preferred country..."
+                  placeholder="Enter your preferred University..."
                   className="mt-3 w-full pl-4 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400 text-slate-700"
                 />
               )}
@@ -236,34 +211,6 @@ ${formData.message || "No message provided"}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            {/* Inquiry Purpose Dropdown */}
-            <div>
-              <label className="block text-slate-700 font-medium mb-2">
-                Inquiry Purpose<span className="text-red-500">*</span>
-              </label>
-              <div className="relative">
-                <select
-                  name="inquiryPurpose"
-                  value={formData.inquiryPurpose}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-slate-400 text-slate-700"
-                >
-                  <option value="">Choose one option...</option>
-                  <option value="Counselling">One-on-One Conunselling</option>
-                  <option value="Course Inquiry">Course Inquiry</option>
-                  <option value="General Inquiry">General Inquiry</option>
-                  <option value="Tests & Interview Preperation">
-                    Tests & Interview Preperation
-                  </option>
-                  <option value="Visa Preperation">Visa Preperation</option>
-                  <option value="Others">Others</option>
-                </select>
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                  <ChevronDown className="w-4 h-4 text-slate-400" />
-                </div>
-              </div>
-            </div>
-
             {/* Description Dropdown */}
             <div>
               <label className="block text-slate-700 font-medium mb-2">

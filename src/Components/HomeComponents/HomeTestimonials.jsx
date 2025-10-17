@@ -59,6 +59,11 @@ export default function HomeTestimonials() {
               className={`${testimonials[0].bg} rounded-3xl p-4 sm:p-6 flex flex-col items-start justify-between min-h-[250px] sm:min-h-[300px]`}
             >
               <div className="text-sm sm:text-base">
+                <p className="text-4xl md:text-6xl font-extrabold mb-7 md:mb-9">
+                  Visa Granted to{" "}
+                  <span className="inline-block">Australia 🇦🇺</span>
+                </p>
+
                 <span className="block pr-2 mb-2">
                   <FaQuoteLeft />
                 </span>

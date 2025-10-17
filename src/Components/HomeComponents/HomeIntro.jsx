@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function HomeIntro() {
   const stats = [
@@ -95,13 +96,15 @@ export default function HomeIntro() {
           </div>
 
           <div className="pt-4">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-text text-white px-8 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-shadow"
-            >
-              Learn More
-            </motion.button>
+            <Link to="/about">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-text text-white px-8 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-shadow"
+              >
+                Learn More
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
       </div>

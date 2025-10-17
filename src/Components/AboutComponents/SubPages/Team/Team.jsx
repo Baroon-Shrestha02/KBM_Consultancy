@@ -81,7 +81,13 @@ export default function TeamMembers() {
 
   return (
     <>
-      <HeroSection2 />
+      <HeroSection2
+        title="About Our Team."
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            eveniet, facilis a aspernatur debitis, suscipit ratione delectus
+            consequuntur molestiae cum expedita cupiditate non autem explicabo."
+        btnText="Learn More"
+      />
       <section className="min-h-screen bg-gray-50 relative py-20 px-6">
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="mb-16 flex items-center flex-col">

@@ -659,15 +659,6 @@ export default function Navbar() {
                               Contact Support
                             </Link>
                           </li>
-                          <li>
-                            <Link
-                              to="/terms"
-                              className="text-gray-700 hover:text-text transition block"
-                              onClick={closeDropdown}
-                            >
-                              Terms of Service
-                            </Link>
-                          </li>
                         </ul>
                       </div>
                     </div>
@@ -924,13 +915,6 @@ export default function Navbar() {
                             onClick={closeDropdown}
                           >
                             Contact Support
-                          </Link>
-                          <Link
-                            to="/terms"
-                            className="block text-gray-700 hover:text-text py-1"
-                            onClick={closeDropdown}
-                          >
-                            Terms of Service
                           </Link>
                         </div>
                       </motion.div>

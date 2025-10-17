@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Play, X } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function HomeHero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -131,16 +132,18 @@ export default function HomeHero() {
             </motion.p>
 
             {/* CTA Button */}
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-text text-white px-10 py-4 rounded-lg font-extrabold transition w-fit tracking-wider text-md"
-            >
-              Start Your Global Journey
-            </motion.button>
+            <Link to="/about">
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-text text-white px-10 py-4 rounded-lg font-extrabold transition w-fit tracking-wider text-md"
+              >
+                Learn More
+              </motion.button>
+            </Link>
           </motion.div>
 
           {/* Bottom Right - Horizontal Scrollable Container */}

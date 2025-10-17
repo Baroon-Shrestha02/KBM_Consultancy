@@ -9,7 +9,7 @@ export default function TestsHero() {
           {/* Video Section */}
           <div className="relative rounded-3xl overflow-hidden aspect-video lg:aspect-auto lg:h-[400px]">
             <video
-              autoplay
+              autoPlay
               muted
               loop
               src="Uploads/home/hero.mp4"

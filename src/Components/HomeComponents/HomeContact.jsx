@@ -4,6 +4,7 @@ export default function HomeContact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    number: "",
     query: "",
     message: "",
   });
@@ -15,7 +16,7 @@ export default function HomeContact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name, email, query, message } = formData;
+    const { name, email, number, query, message } = formData;
     const whatsappNumber = "9779812345678";
     const text = `Hello! 👋%0AMy name is ${name}.%0AEmail: ${email}%0AQuery Type: ${query}%0AMessage: ${message}`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${text}`;
@@ -110,6 +111,19 @@ export default function HomeContact() {
                 className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
               />
             </div>
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-700">
+                Number
+              </label>
+              <input
+                type="number"
+                name="number"
+                value={formData.number}
+                onChange={handleChange}
+                placeholder="98******"
+                className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+              />
+            </div>
 
             <div>
               <label className="block mb-2 text-sm font-medium text-gray-700">
@@ -123,10 +137,11 @@ export default function HomeContact() {
               >
                 <option value="">Select an option</option>
                 <option value="General Inquiry">General Inquiry</option>
-                <option value="Business Collaboration">
-                  Business Collaboration
+                <option value="Visa Processing">Visa Processing</option>
+                <option value="Class Inquiry">Class Inquiry</option>
+                <option value="Tests & Interview preparation">
+                  Tests & Interview Prep
                 </option>
-                <option value="Technical Support">Technical Support</option>
                 <option value="Other">Other</option>
               </select>
             </div>

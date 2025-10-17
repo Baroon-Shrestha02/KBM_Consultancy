@@ -40,9 +40,11 @@ export default function Footer2() {
 
             {/* Button and QR Section */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-6">
-              <button className="px-6 sm:px-8 py-2 sm:py-3 bg-text text-white font-semibold rounded-full hover:scale-105 transition duration-300 shadow-md">
-                Let’s Connect
-              </button>
+              <Link to="/contact">
+                <button className="px-6 sm:px-8 py-2 sm:py-3 bg-text text-white font-semibold rounded-full hover:scale-105 transition duration-300 shadow-md">
+                  Let’s Connect
+                </button>
+              </Link>
               |{/* QR Code Area */}
               <div className="flex flex-col items-center ">
                 <img

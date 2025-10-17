@@ -8,7 +8,6 @@ import MainHeroHelper from "../HelperComponents/MainHeroHelper";
 export default function Index() {
   return (
     <div>
-      <MainHeroHelper />
       <AboutHero />
       <AboutIntro />
       <AboutWhy />

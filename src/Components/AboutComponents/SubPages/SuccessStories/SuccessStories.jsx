@@ -28,8 +28,13 @@ export default function SuccessStories() {
 
   return (
     <div>
-      <HeroSection2 />
-
+      <HeroSection2
+        title="Why Choose KBM?"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            eveniet, facilis a aspernatur debitis, suscipit ratione delectus
+            consequuntur molestiae cum expedita cupiditate non autem explicabo."
+        btnText="Join Now"
+      />
       <section className="container mx-auto my-12">
         {/* Heading */}
         <div className="mb-12 flex items-center flex-col gap-4">
