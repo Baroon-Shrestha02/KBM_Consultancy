@@ -106,10 +106,10 @@ ${formData.message || "No message provided"}
               <Mail className="w-6 h-6 text-slate-600" />
             </div>
             <button
-              onClick={() => handleEmailClick("inquiry@semla.edu.np")}
+              onClick={() => handleEmailClick("info@kbm.edu.np")}
               className="text-slate-600 hover:text-slate-800 transition-colors text-left block mb-2 w-full"
             >
-              inquiry@semla.edu.np
+              info@kbm.edu.np
             </button>
           </div>
 
