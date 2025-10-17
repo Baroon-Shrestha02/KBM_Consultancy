@@ -10,7 +10,7 @@ export default function StudyHero({ title, description, bgImg, img, video }) {
   return (
     <section className="mx-6 mt-[12vh] mb-12 ">
       <div className="">
-        <div className="relative bg-white rounded-3xl p-8 md:p-12 lg:p-16 shadow-lg overflow-hidden border border-gray-100 shadow-2xl">
+        <div className="relative bg-white rounded-3xl p-8 md:p-12 lg:p-16 overflow-hidden border border-gray-100 shadow-2xl">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-30"
             style={{ backgroundImage: `url(${bgImg})` }}
